@@ -1,0 +1,13 @@
+# ROS 2 <-> MQTT bridge config for robot joystick control
+/**/*:
+  ros__parameters:
+    broker:
+      host: avaxia-robotics.local
+      port: 1888
+    bridge:
+      mqtt2ros:
+        mqtt_topics:
+          - robot/control
+        robot/control:
+          ros_topic: /robot/joystick_cmd
+          primitive: true
